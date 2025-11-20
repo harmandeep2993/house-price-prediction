@@ -27,4 +27,5 @@ build/
 
 # Environment
 .env
+.venv
 .env.local
