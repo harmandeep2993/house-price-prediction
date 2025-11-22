@@ -1,0 +1,32 @@
+project:
+  name: "house price prediction random forest"
+  author: "Harmandeep Singh"
+  version: "1.0"
+
+data:
+  raw_dir: "data/raw/"
+  processed_dir: "data/processed/"
+  train_file: "train.csv"
+  test_file: "test.csv"
+
+model:
+  model_dir: "models/"
+  model_file: "model.pkl"
+  columns_file: "columns.json"
+  encoder_file: "encoder.pkl"
+  scaler_file: "scaler.pkl"
+
+evaluation:
+  metrics_dir: "results/"
+  metrics_file: "results/metrics.json"
+  save_plots: true
+
+logging:
+  log_dir: "logs/"
+  log_file: "logs/training.log"
+  level: "INFO"
+
+app:
+  model_path: "models/model.pkl"
+  host: "localhost"
+  port: 8501
