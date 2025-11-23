@@ -77,6 +77,13 @@ class ModelTrainer:
             X, y, test_size=0.2, random_state=42
         )
 
+        # Save feature columns for prediction
+        columns_path = os.path.join(self.model_dir, "columns.json")
+        with open(columns_path, "w") as f:
+            json.dump(list(X_train.columns), f, indent=4)
+
+        print(f"Saved {len(X_train.columns)} feature columns to: {columns_path}")
+
         print(f"Train shape: {X_train.shape}, Test shape: {X_test.shape}")
         return X_train, X_test, y_train, y_test
 
