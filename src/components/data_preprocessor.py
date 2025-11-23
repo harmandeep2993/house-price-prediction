@@ -107,8 +107,7 @@ class Datapreprocessor:
         bsmtfin_map = {"GLQ": 6, "ALQ": 5, "BLQ": 4, "Rec": 3, "LwQ": 2, "Unf": 1, "None": 0, "NA": 0}
         lotshape_map = {"Reg": 4, "IR1": 3, "IR2": 2, "IR3": 1}
         landslope_map = {"Gtl": 3, "Mod": 2, "Sev": 1}
-        functional_map = {"Typ": 7, "Min1": 6, "Min2": 5, "Mod": 4,
-                        "Maj1": 3, "Maj2": 2, "Sev": 1, "Sal": 0}
+        functional_map = {"Typ": 7, "Min1": 6, "Min2": 5, "Mod": 4, "Maj1": 3, "Maj2": 2, "Sev": 1, "Sal": 0}
 
         # Consolidated mapping
         ordinal_mappings = {
@@ -189,7 +188,6 @@ class Datapreprocessor:
 
 
 # Manual test
-
 if __name__ == "__main__":
     raw_path = os.path.join("data", "raw", "train.csv")
     df_raw = pd.read_csv(raw_path)
