@@ -120,7 +120,7 @@ class ModelTrainer:
 
         y_pred = model.predict(X_test)
 
-        rmse = mean_squared_error(y_test, y_pred, squared=False)
+        rmse = mean_squared_error(y_test, y_pred)**0.5
         mae = mean_absolute_error(y_test, y_pred)
         r2 = r2_score(y_test, y_pred)
 
